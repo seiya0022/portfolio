@@ -1,0 +1,7 @@
+Transaction Date;Booking Date;Account number;Account Name;Transaction Category;Accocunt Number;Name of Account;Transaction type;Message;Note;VS;KS;SS;Booked amount;Account Currency;Original Amount and Currency;Original Amount and Currency;Fee;Transaction ID;Note;Merchant;City
+"04.06.2025";"04.06.2025 23:59";"2764885004/5500";"Seiya Asai";"Tax";"";"";"Interest tax";"Withholding tax";"Withholding tax";"";"1148";"";"-108,17";"CZK";"";"";"0,00";"7628417034";"";"";""
+"04.06.2025";"04.06.2025 23:59";"2764885004/5500";"Seiya Asai";"Interest";"";"";"Accrued interest";"";"Interest bonus for active using your current account 05/2025";"";"598";"";"721,15";"CZK";"";"";"0,00";"7628417012";"";"";""
+"31.05.2025";"31.05.2025 23:59";"2764885004/5500";"Seiya Asai";"Tax";"";"";"Interest tax";"Withholding tax";"Withholding tax";"";"1148";"";"-2,77";"CZK";"";"";"0,00";"7613334928";"";"";""
+"31.05.2025";"31.05.2025 23:59";"2764885004/5500";"Seiya Asai";"Interest";"";"";"Accrued interest";"";"Interest 05/2025 (2764885004/5500)";"";"598";"";"18,48";"CZK";"";"";"0,00";"7613334911";"";"";""
+"18.05.2025";"18.05.2025 23:30";"2764885004/5500";"Seiya Asai";"Payment";"7655078003/5500";"Seiya Asai";"Incoming payment";"";"";"";"";"";"10 000,00";"CZK";"";"";"0,00";"7568099753";"";"";""
+"18.05.2025";"18.05.2025 23:27";"2764885004/5500";"Seiya Asai";"Payment";"1036314516/5500";"Seiya Asai";"Incoming payment";"";"";"";"";"";"472 112,57";"CZK";"";"";"0,00";"7568098846";"";"";""
