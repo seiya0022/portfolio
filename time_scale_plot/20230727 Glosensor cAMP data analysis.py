@@ -10,7 +10,6 @@ project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.append(project_root)
 from common import common_tools as ct
 
-
 def position_to_treatment(row):
     """Define treatment according to the position."""
 
@@ -87,7 +86,7 @@ def position_to_conc(row):
         return '200 uM'
     elif row['position'] == 'C17' or row['position'] =='G17' or row['position'] == 'K17' :
         return '200 uM'
-#%%
+
 
 # create DataFrame as df
 def load_and_process_data(file_info) -> pd.DataFrame:
