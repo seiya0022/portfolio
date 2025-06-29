@@ -16,9 +16,14 @@ root = tk.Tk()
 root.withdraw()
 
 
-def select_excel_file():
+def select_excel_file(initialdir: str=None):
     """Prompt the user to select an Excel file and return its path."""
-    file_path = fd.askopenfilename(filetypes=[("Excel files", "*.xlsx;*.xls;*.xlsm")])
+
+    if initialdir is None:
+        initialdir = os.getcwd()
+        
+    file_path = fd.askopenfilename(filetypes=[("Excel files", "*.xlsx;*.xls;*.xlsm")],
+                                    initialdir=initialdir)
 
     if not file_path:
         mb.showerror('Error', 'No file selected.')
@@ -39,11 +44,11 @@ def select_sheet(xls):
             return None
             
 
-def process_excel_file(allow_sheet_selection: bool=True, sheet_name: str=None) -> Dict[str, str]:
+def process_excel_file(initialdir: str=None, allow_sheet_selection: bool=True, sheet_name: str=None) -> Dict[str, str]:
     """This function is a wrapper for the select_excel_file and select_sheet functions.
     It prompts the user to select an Excel file and, if allowed, a sheet within that file.
     min function to handle Excel file selection and processing."""    
-    file_path = select_excel_file()
+    file_path = select_excel_file(initialdir)
     if not file_path:
         return [None, None, None, None]
     try:
@@ -73,9 +78,14 @@ def process_excel_file(allow_sheet_selection: bool=True, sheet_name: str=None) -
 
 
 
-def savefig_and_show(file_info: dict, show_message: bool = True):
+def savefig_and_show(file_info: dict, transparent: bool=False, show_message: bool=True, dpi=200):
+    """this function save figs.
+    The user can decide either the figure is transparent, the value of dpi(default is 200), and show message or not"""
+
     png_file_name = os.path.join(file_info['directory'], f'{file_info["file_name"]}_{file_info["sheet_name"]}.png')
-    plt.savefig(png_file_name, transparent=True, dpi = 200)
+    plt.savefig(png_file_name, 
+                transparent=transparent, 
+                dpi=dpi)
     if show_message:
         mb.showinfo('message', f'Program executed.\n\n The image file "{os.path.basename(png_file_name)}" has been saved in the folder where the Excel file is located.')
         os.startfile(png_file_name)     # show the figure by os default photo viewer
