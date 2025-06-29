@@ -118,7 +118,7 @@ def plot_facetgrid(m_df: pd.DataFrame, file_info):
                         )
 
     grid.map(sns.lineplot, 'Cycle No', 'luminescence')
-    ct.savefig_and_show(file_info, transparent=False, show_message=True, dpi=500)
+    ct.savefig_and_show(file_info, transparent=False, show_message=True, dpi=200)
 
 
 def main():
